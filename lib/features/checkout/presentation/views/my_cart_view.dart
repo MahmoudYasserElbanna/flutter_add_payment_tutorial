@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:payment_app/core/utils/styles.dart';
-import 'widgets/custom_button.dart';
+import '../../../../core/widgets/custom_button.dart';
 import 'widgets/product_price_info.dart';
 import 'widgets/total_price.dart';
 
@@ -27,7 +28,7 @@ class MyCartView extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 16),
-            Image.asset('assets/images/basketImage.png'),
+            Expanded(child: Image.asset('assets/images/basketImage.png')),
             const SizedBox(height: 32),
             const ProductPriceInfo(title: 'Order Subtotal', cost: r'$42.97'),
             const ProductPriceInfo(title: 'Discount', cost: r'$0'),
@@ -42,7 +43,10 @@ class MyCartView extends StatelessWidget {
               finalPrice: r'$50.97',
             ),
             const SizedBox(height: 16),
-            const CustomButton(buttonLabel: 'Complete Payment'),
+            CustomButton(
+              buttonLabel: 'Complete Payment',
+              onPressed: () {},
+            ),
             const SizedBox(height: 16),
           ],
         ),
