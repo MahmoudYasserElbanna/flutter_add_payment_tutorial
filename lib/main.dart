@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:payment_app/features/checkout/presentation/views/my_cart.dart';
+import 'package:payment_app/features/checkout/presentation/views/my_cart_view.dart';
 
 void main() {
   runApp(const AddPaymentApp());
@@ -12,7 +12,7 @@ class AddPaymentApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyCart(),
+      home: MyCartView(),
     );
   }
 }
