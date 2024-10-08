@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/core/utils/styles.dart';
 
-AppBar buildAppBar({required String appBarTitle}) {
+AppBar buildAppBar({String? appBarTitle}) {
   return AppBar(
     elevation: 0,
     leading: const Icon(
@@ -9,7 +9,7 @@ AppBar buildAppBar({required String appBarTitle}) {
       size: 42,
     ),
     title: Text(
-      appBarTitle,
+      appBarTitle ?? '',
       style: Styles.style25,
     ),
     centerTitle: true,
