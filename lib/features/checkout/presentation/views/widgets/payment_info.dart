@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:payment_app/core/utils/styles.dart';
 
-class PaymentInfo extends StatelessWidget {
-  const PaymentInfo({
+class UsedCardInfo extends StatelessWidget {
+  const UsedCardInfo({
     super.key,
   });
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:payment_app/core/utils/styles.dart';
 import 'package:payment_app/features/checkout/presentation/views/widgets/check_out_info.dart';
 import 'package:payment_app/features/checkout/presentation/views/widgets/payment_info.dart';
@@ -51,7 +50,7 @@ class CustomCheckOutCard extends StatelessWidget {
               finalPrice: r'$50.97',
             ),
             const SizedBox(height: 32),
-            const PaymentInfo(),
+            const UsedCardInfo(),
             const SizedBox(
               height: 32,
             )
