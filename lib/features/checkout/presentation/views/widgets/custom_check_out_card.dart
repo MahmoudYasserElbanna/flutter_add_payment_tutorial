@@ -51,7 +51,10 @@ class CustomCheckOutCard extends StatelessWidget {
               finalPrice: r'$50.97',
             ),
             const SizedBox(height: 32),
-            const PaymentInfo()
+            const PaymentInfo(),
+            const SizedBox(
+              height: 32,
+            )
           ],
         ),
       ),
