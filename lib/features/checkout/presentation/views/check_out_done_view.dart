@@ -6,6 +6,8 @@ class CheckOutDoneView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CheckOutDoneViewBody();
+    return const Scaffold(
+      body: CheckOutDoneViewBody(),
+    );
   }
 }
