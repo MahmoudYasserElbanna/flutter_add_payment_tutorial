@@ -20,6 +20,7 @@ class _PaymentMethodListViewState extends State<PaymentMethodListView> {
     return SizedBox(
       height: 64,
       child: ListView.builder(
+        // shrinkWrap: true,
         itemCount: paymentMethodsImages.length,
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),
