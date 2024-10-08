@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:payment_app/core/utils/styles.dart';
 import 'package:payment_app/features/checkout/presentation/views/widgets/check_out_info.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/payment_info.dart';
 import 'package:payment_app/features/checkout/presentation/views/widgets/total_price.dart';
 
 class CustomCheckOutCard extends StatelessWidget {
@@ -50,33 +51,7 @@ class CustomCheckOutCard extends StatelessWidget {
               finalPrice: r'$50.97',
             ),
             const SizedBox(height: 32),
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-              decoration: ShapeDecoration(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-              ),
-              child: Row(
-                children: [
-                  SvgPicture.asset('assets/images/logo.svg'),
-                  const SizedBox(width: 16),
-                  const Text.rich(
-                    TextSpan(
-                      text: 'Credit Card',
-                      style: Styles.style18,
-                    ),
-                  ),
-                  Text.rich(
-                    TextSpan(
-                      text: 'Mastercard **78',
-                      style: Styles.style16,
-                    ),
-                  ),
-                ],
-              ),
-            )
+            const PaymentInfo()
           ],
         ),
       ),
