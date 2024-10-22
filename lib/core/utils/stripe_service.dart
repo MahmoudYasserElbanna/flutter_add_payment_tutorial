@@ -36,6 +36,10 @@ class StripeService {
       ),
     );
   }
+
   /* -------------------------------------------------------------------- */
   // TODO [3] Display/Present Payment Sheet.
+  Future displayPaymentSheet() async {
+    Stripe.instance.presentPaymentSheet();
+  }
 }
