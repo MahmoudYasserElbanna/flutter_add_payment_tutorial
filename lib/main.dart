@@ -16,3 +16,9 @@ class AddPaymentApp extends StatelessWidget {
     );
   }
 }
+/* Steps To Add Stripe Payment Method
+  [1] Add flutter_stripe package. [Done]
+  [2] Create Payment Intent. [Api Service, Stripe Service]
+  [3] Init Payment Sheet.
+  [4] Display/Present Payment Sheet.
+ */
