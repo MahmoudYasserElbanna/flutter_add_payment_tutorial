@@ -14,6 +14,7 @@ class CheckoutRepoImpl extends CheckoutRepo {
           paymentIntentInputModel: paymentIntentInputModel);
       return right(null);
     } catch (e) {
+      print(e.toString());
       return left(ServerFailure(errMessage: e.toString()));
     }
   }

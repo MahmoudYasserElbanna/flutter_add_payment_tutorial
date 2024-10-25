@@ -1,10 +1,19 @@
 class PaymentIntentInputModel {
-  String amount, currency;
-  PaymentIntentInputModel({required this.amount, required this.currency});
+  final String currency;
+  final dynamic amount;
+  PaymentIntentInputModel({
+    required this.currency,
+    required this.amount,
+  });
   toJson() {
     return {
-      'amount': '${amount}00',
       'currency': currency,
+      'amount': amount,
     };
   }
 }
+
+// String convertToString(dynamic amount) {
+//   final dynamic convertedAmount = amount * 100;
+//   return convertedAmount.toString();
+// }

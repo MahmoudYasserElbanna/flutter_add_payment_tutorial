@@ -35,10 +35,11 @@ class CustomButtonBlocConsumer extends StatelessWidget {
             PaymentIntentInputModel paymentIntentInputModel =
                 PaymentIntentInputModel(
               currency: 'usd',
-              amount: '100',
+              amount: 100,
             );
-            BlocProvider.of<StripePaymentCubit>(context)
-                .makePayment(paymentIntentInputModel);
+            BlocProvider.of<StripePaymentCubit>(context).makePayment(
+              paymentIntentInputModel,
+            );
           },
           buttonLabel: 'Continue',
           isLoading: state is StripePaymentLoading ? true : false,
