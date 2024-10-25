@@ -5,6 +5,5 @@ import 'package:payment_app/features/checkout/data/models/payment_intent_input_m
 abstract class CheckoutRepo {
   Future<Either<Failure, void>> makePayment(
       {required PaymentIntentInputModel paymentIntentInputModel});
-
   // we use void function that will grantee ti use the payment is success.
 }

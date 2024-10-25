@@ -6,8 +6,10 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.buttonLabel,
     this.onPressed,
+    this.isLoading = false,
   });
   final String buttonLabel;
+  final bool isLoading;
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
@@ -21,10 +23,12 @@ class CustomButton extends StatelessWidget {
         ),
         elevation: 0,
       ),
-      child: Text(
-        buttonLabel,
-        style: Styles.style22,
-      ),
+      child: isLoading
+          ? const CircularProgressIndicator()
+          : Text(
+              buttonLabel,
+              style: Styles.style22,
+            ),
     );
   }
 }
