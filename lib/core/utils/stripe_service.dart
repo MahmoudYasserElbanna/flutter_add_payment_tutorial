@@ -21,6 +21,7 @@ class StripeService {
       url: url,
       body: paymentIntentInputModel.toJson(),
       token: ApiKeys.stripeApiKey,
+      contentType: 'application/x-www-form-urlencoded',
     );
     var paymentIntentModel = PaymentIntentModel.fromJson(response.data);
     return paymentIntentModel;

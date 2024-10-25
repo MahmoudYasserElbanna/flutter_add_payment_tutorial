@@ -15,8 +15,9 @@ class StripePaymentCubit extends Cubit<StripePaymentState> {
       paymentIntentInputModel: paymentIntentInputModel,
     );
     data.fold(
-      (ifFail) => emit(StripePaymentFailed(errMessage: ifFail.toString())),
-      (ifSuccess) => emit(StripePaymentSuccess()),
+      (failure) =>
+          emit(StripePaymentFailed(errMessage: failure.errMessage.toString())),
+      (success) => emit(StripePaymentSuccess()),
     );
   }
 }

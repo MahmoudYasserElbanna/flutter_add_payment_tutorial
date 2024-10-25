@@ -44,8 +44,11 @@ class MyCartViewBody extends StatelessWidget {
               //   ),
               // );
               showModalBottomSheet(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20),
+                  ),
                 ),
                 useSafeArea: true,
                 context: context,
