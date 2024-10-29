@@ -11,7 +11,7 @@ class PaymentIntentInputModel {
     return {
       'currency': currency,
       'amount': amount * 100,
-      'customerId': customerId,
+      'customer': customerId,
     };
   }
 }

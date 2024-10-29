@@ -80,15 +80,15 @@ class StripeService {
     ApiService apiService = ApiService();
 
     var response = await apiService.post(
+      body: {
+        'customer': customerId,
+      },
       url: 'https://api.stripe.com/v1/ephemeral_keys',
       token: ApiKeys.stripeApiKey,
       contentType: Headers.formUrlEncodedContentType,
       header: {
-        "Authorization": "Bearer ${ApiKeys.stripeApiKey}",
-        "Stripe-Version": "2023-08-16",
-      },
-      body: {
-        'customer': customerId,
+        'Authorization': 'Bearer ${ApiKeys.stripeApiKey}',
+        'Stripe-Version': '2023-08-16',
       },
     );
     var ephemeralKey = EphemeralKeyModel.fromJson(response.data);
